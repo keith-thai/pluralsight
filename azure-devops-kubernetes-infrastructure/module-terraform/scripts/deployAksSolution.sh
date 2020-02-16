@@ -30,3 +30,4 @@ terraform apply -auto-approve ${planName}
 # Get kube-config
 kubeConfigName='config'
 echo "$(terraform output kube_config)" > $HOME/.kube/${kubeConfigName}
+
