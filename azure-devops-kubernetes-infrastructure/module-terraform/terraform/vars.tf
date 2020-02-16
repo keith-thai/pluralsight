@@ -1,10 +1,10 @@
 variable location {
     description = "The location of the AKS Cluster solution."
-    default     = "Australia East"
+    default     = "US East"
 }
 variable resource_group_name {
     description = "The name of the Azure Resource Group."
-    default     = "demo-aks"
+    default     = "ktt-aks"
 }
 variable log_analytics_workspace_name {
     description = "The name of the Log Analytics workspace."
@@ -13,7 +13,7 @@ variable log_analytics_workspace_name {
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 variable log_analytics_workspace_location {
     description = "The location of the Log Analytics workspace."
-    default     = "Australia East"
+    default     = "US East"
 }
 # refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
 variable log_analytics_workspace_sku {
@@ -22,7 +22,7 @@ variable log_analytics_workspace_sku {
 }
 variable aks_cluster_name {
     description = "The name of the AKS cluster resource."
-    default     = "demoCluster"
+    default     = "kttCluster"
 }
 variable "public_ssh_key_path" {
     description = "The Path at which your Public SSH Key is located. Defaults to ~/.ssh/id_rsa.pub"

@@ -1,4 +1,4 @@
-resource "azurerm_virtual_network" "demo" {
+resource "azurerm_virtual_network" "ktt" {
   name                = "${azurerm_resource_group.aks.name}-network"
   location            = "${azurerm_resource_group.aks.location}"
   resource_group_name = "${azurerm_resource_group.aks.name}"
@@ -9,7 +9,7 @@ resource "azurerm_subnet" "cluster" {
   name                  = "cluster-01"
   resource_group_name   = "${azurerm_resource_group.aks.name}"
   address_prefix        = "10.1.0.0/24"
-  virtual_network_name  = "${azurerm_virtual_network.demo.name}"
+  virtual_network_name  = "${azurerm_virtual_network.ktt.name}"
   route_table_id        = "${azurerm_route_table.cluster-01.id}"
 }
 resource "azurerm_route_table" "cluster-01" {

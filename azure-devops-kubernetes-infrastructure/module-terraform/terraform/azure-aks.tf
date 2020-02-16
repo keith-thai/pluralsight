@@ -1,4 +1,4 @@
-resource "azurerm_kubernetes_cluster" "demo" {
+resource "azurerm_kubernetes_cluster" "ktt" {
     name                = "${var.aks_cluster_name}"
     location            = "${azurerm_resource_group.aks.location}"
     dns_prefix          = "ps-${var.aks_cluster_name}"
