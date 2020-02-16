@@ -4,7 +4,8 @@ groupLocation='southcentralus'
 group=$(az group create --name ${groupName} --location "${groupLocation}" --verbose)
 
 # Create Storage Account for Terraform Remote State
-accountName=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+# KTT comment - accountName=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+accountName=ktt$RANDOM
 storage=$(az storage account create \
     --name ${accountName} \
     --resource-group $(echo $group | jq .name -r) \
