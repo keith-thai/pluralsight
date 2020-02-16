@@ -18,4 +18,3 @@ az storage container create \
     --name ${containerName} \
     --account-name $(echo $storage | jq .name -r) \
     --account-key $(az storage account keys list --resource-group $(echo $group | jq .name -r) --account-name $(echo $storage | jq .name -r) | jq .[0].value -r)
-
