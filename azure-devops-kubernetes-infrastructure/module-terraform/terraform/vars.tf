@@ -1,6 +1,6 @@
 variable location {
     description = "The location of the AKS Cluster solution."
-    default     = "US East"
+    default     = "southcentralus"
 }
 variable resource_group_name {
     description = "The name of the Azure Resource Group."
@@ -13,7 +13,7 @@ variable log_analytics_workspace_name {
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 variable log_analytics_workspace_location {
     description = "The location of the Log Analytics workspace."
-    default     = "US East"
+    default     = "southcentralus"
 }
 # refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
 variable log_analytics_workspace_sku {

@@ -1,6 +1,6 @@
 # Create Resource Group for Terraform Remote State
 groupName='ktt-tfstate'
-groupLocation='US East'
+groupLocation='southcentralus'
 group=$(az group create --name ${groupName} --location "${groupLocation}" --verbose)
 
 # Create Storage Account for Terraform Remote State
